@@ -1,0 +1,13 @@
+{
+    "name": "svetlyi/dups-finder",
+    "description": "A simple project for playing with threads in PHP",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {"DupsFinder\\": "src/"}
+    },
+    "require": {
+        "php": "^7.2",
+        "symfony/console": "^4.3",
+        "ext-pthreads": "*"
+    }
+}
