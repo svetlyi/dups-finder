@@ -6,14 +6,21 @@ use DupsFinder\File;
 
 /**
  * Class Duplicates
- * A service to find same files.
+ * A service to find the same files.
  *
  * @package DupsFinder\Service
  */
 class Duplicates
 {
     /**
-     * Generator, that yields files paths.
+     * Finds files with the same hash
+     * and returns duplicates.
+     * ```php
+     *  [
+     *      'hash' => ['file/path/one', 'file/path/two' ...],
+     *      ...
+     *  ]
+     * ```
      *
      * @param array $files
      * @return array

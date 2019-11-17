@@ -56,6 +56,7 @@ class FindDuplicates extends Command
             $io->success('submitted a new task to the next worker');
         }
 
+        $startTime = microtime(true);
         $io->comment('Waiting for the threads to finish...');
 
         $pool->shutdown();
@@ -68,5 +69,7 @@ class FindDuplicates extends Command
             $io->title($hash);
             $io->listing($files);
         }
+
+        $io->comment(sprintf("elapsed time: %f seconds", microtime(true) - $startTime));
     }
 }
